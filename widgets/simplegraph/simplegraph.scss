@@ -9,9 +9,9 @@ $tick-color:        rgba(0, 0, 0, 0.4);
 
 
 // ----------------------------------------------------------------------------
-// Widget-graph styles
+// Widget-simplegraph styles
 // ----------------------------------------------------------------------------
-.widget-graph {
+.widget-simplegraph {
 
   background-color: $background-color;
   position: relative;
@@ -58,10 +58,6 @@ $tick-color:        rgba(0, 0, 0, 0.4);
     fill-opacity: 1;
   }
 
-  .updated-at {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
   .domain {
     display: none;
   }

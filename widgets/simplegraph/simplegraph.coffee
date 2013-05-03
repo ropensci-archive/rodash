@@ -1,7 +1,6 @@
-class Dashing.Graph extends Dashing.Widget
+class Dashing.SimpleGraph extends Dashing.Widget
 
   @accessor 'current', ->
-    return @get('displayedValue') if @get('displayedValue')
     points = @get('points')
     if points
       points[points.length - 1].y
@@ -25,6 +24,8 @@ class Dashing.Graph extends Dashing.Widget
 
     @graph.series[0].data = @get('points') if @get('points')
 
+    x_axis = new Rickshaw.Graph.Axis.Time(graph: @graph)
+    y_axis = new Rickshaw.Graph.Axis.Y(graph: @graph, tickFormat: Rickshaw.Fixtures.Number.formatKMBT)
     @graph.render()
 
   onData: (data) ->
