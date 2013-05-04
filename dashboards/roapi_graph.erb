@@ -1,5 +1,16 @@
 <script type='text/javascript'>
 $(function() {
+  $('li').live('click', function(e){
+    var widget = $(this).find('.widget');
+    var url = widget.data('url');
+    // window.location = url;
+    window.open(url, '_blank');
+  });
+});
+</script>
+
+<script type='text/javascript'>
+$(function() {
   // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
   // Dashing.gridsterLayout('[{"col":1,"row":1},{"col":2,"row":1},{"col":3,"row":1},{"col":4,"row":1},{"col":5,"row":1},{"col":6,"row":1},{"col":1,"row":2},{"col":2,"row":2},{"col":3,"row":2},{"col":4,"row":2},{"col":5,"row":2},{"col":6,"row":2},{"col":1,"row":3},{"col":2,"row":3},{"col":3,"row":3},{"col":4,"row":3},{"col":5,"row":3},{"col":6,"row":3}]')
   Dashing.widget_base_dimensions = [145, 125]
@@ -19,99 +30,99 @@ $(function() {
     </li>
     
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphimpactstory" data-view="Graph" data-title="ImpactStory" style="background-color:#CB9430"></div>
+      <div data-id="graphimpactstory" data-view="Graph" data-title="ImpactStory" style="background-color:#CB9430" data-url="https://github.com/ropensci/rimpactstory"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphplosalm" data-view="Graph" data-title="PLoS ALM" style="background-color:#78694C"></div>
+      <div data-id="graphplosalm" data-view="Graph" data-title="PLoS ALM" style="background-color:#78694C" data-url="https://github.com/ropensci/alm"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphopensnporg" data-view="Graph" data-title="OpenSNP" style="background-color:#E3BF87"></div>
+      <div data-id="graphopensnporg" data-view="Graph" data-title="OpenSNP" style="background-color:#E3BF87" data-url="https://github.com/ropensci/rsnps"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphaltmetric" data-view="Graph" data-title="Altmetric" style="background-color:#905320"></div>
+      <div data-id="graphaltmetric" data-view="Graph" data-title="Altmetric" style="background-color:#905320" data-url="https://github.com/ropensci/rAltmetric"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphfigshare" data-view="Graph" data-title="Figshare" style="background-color:#F2862F"></div>
+      <div data-id="graphfigshare" data-view="Graph" data-title="Figshare" style="background-color:#F2862F" data-url="https://github.com/ropensci/rfigshare"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphbhl" data-view="Graph" data-title="BiodHerLibr" style="background-color:#F5B412"></div>
+      <div data-id="graphbhl" data-view="Graph" data-title="BiodHerLibr" style="background-color:#F5B412" data-url="https://github.com/ropensci/rbhl"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphebird" data-view="Graph" data-title="eBird" style="background-color:#C09059"></div>
+      <div data-id="graphebird" data-view="Graph" data-title="eBird" style="background-color:#C09059" data-url="https://github.com/ropensci/rebird"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphncbi_entrez" data-view="Graph" data-title="NCBI Entrez" style="background-color:#EAA224"></div>
+      <div data-id="graphncbi_entrez" data-view="Graph" data-title="NCBI Entrez" style="background-color:#EAA224" data-url="https://github.com/ropensci/rentrez"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphitis" data-view="Graph" data-title="ITIS" style="background-color:#C66C31"></div>
+      <div data-id="graphitis" data-view="Graph" data-title="ITIS" style="background-color:#C66C31" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphgbif" data-view="Graph" data-title="GBIF" style="background-color:#F19C54"></div>
+      <div data-id="graphgbif" data-view="Graph" data-title="GBIF" style="background-color:#F19C54" data-url="https://github.com/ropensci/rgbif"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphelife" data-view="Graph" data-title="eLife" style="background-color:#EDBE5C"></div>
+      <div data-id="graphelife" data-view="Graph" data-title="eLife" style="background-color:#EDBE5C" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="grapheol" data-view="Graph" data-title="EOL.org" style="background-color:#926515"></div>
+      <div data-id="grapheol" data-view="Graph" data-title="EOL.org" style="background-color:#926515" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphiplant_tnrs" data-view="Graph" data-title="iPlant TNRS" style="background-color:#EF9D1F"></div>
+      <div data-id="graphiplant_tnrs" data-view="Graph" data-title="iPlant TNRS" style="background-color:#EF9D1F" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphubio" data-view="Graph" data-title="uBio" style="background-color:#B77442"></div>
+      <div data-id="graphubio" data-view="Graph" data-title="uBio" style="background-color:#B77442" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="grapheol_gnr" data-view="Graph" data-title="EOL GNR" style="background-color:#845C30"></div>
+      <div data-id="grapheol_gnr" data-view="Graph" data-title="EOL GNR" style="background-color:#845C30" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphtropicos" data-view="Graph" data-title="Tropicos" style="background-color:#B28134"></div>
+      <div data-id="graphtropicos" data-view="Graph" data-title="Tropicos" style="background-color:#B28134" data-url="https://github.com/ropensci/taxize_"></div>
     </li>
   
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphfishbase" data-view="Graph" data-title="Fishbase" style="background-color:#CA8025"></div>
+      <div data-id="graphfishbase" data-view="Graph" data-title="Fishbase" style="background-color:#CA8025" data-url="https://github.com/ropensci/fishbase"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphdatacite" data-view="Graph" data-title="Datacite" style="background-color:#BB9A39"></div>
+      <div data-id="graphdatacite" data-view="Graph" data-title="Datacite" style="background-color:#BB9A39" data-url="https://github.com/ropensci/rmetadata"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphgithub" data-view="Graph" data-title="GitHub" style="background-color:#D8A14F"></div>
+      <div data-id="graphgithub" data-view="Graph" data-title="GitHub" style="background-color:#D8A14F" data-url="https://github.com/ropensci/sandbox"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphpubmed" data-view="Graph" data-title="PubMed" style="background-color:#F1A142"></div>
+      <div data-id="graphpubmed" data-view="Graph" data-title="PubMed" style="background-color:#F1A142" data-url="https://github.com/ropensci/rpubmed"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphplossearch" data-view="Graph" data-title="PLoS Search" style="background-color:#AA6725"></div>
+      <div data-id="graphplossearch" data-view="Graph" data-title="PLoS Search" style="background-color:#AA6725" data-url="https://github.com/ropensci/rplos"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphorcid" data-view="Graph" data-title="Orcid" style="background-color:#DCA121"></div>
+      <div data-id="graphorcid" data-view="Graph" data-title="Orcid" style="background-color:#DCA121" data-url="https://github.com/ropensci/rorcid"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphnpn" data-view="Graph" data-title="NatPhenNet" style="background-color:#756237"></div>
+      <div data-id="graphnpn" data-view="Graph" data-title="NatPhenNet" style="background-color:#756237" data-url="https://github.com/ropensci/rnpn"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="graphneotoma" data-view="Graph" data-title="Neotoma" style="background-color:#DFAA6C"></div>
+      <div data-id="graphneotoma" data-view="Graph" data-title="Neotoma" style="background-color:#DFAA6C" data-url="https://github.com/ropensci/rneotoma"></div>
     </li>
 
   </ul>
