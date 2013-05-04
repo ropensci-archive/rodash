@@ -8,7 +8,7 @@ end
 last_x = points.last[:x]
 
 SCHEDULER.every '20s', :first_in => 0 do |job|
-  result = HTTParty.get('https://api.github.com/repos/ropensci/rmendeley/forks')
+	result = HTTParty.get('https://api.github.com/repos/ropensci/rmendeley/forks', :headers => {"User-Agent" => "Httparty"})
   
 	if result[0]['name'] == "RMendeley"
 		out = 50
